@@ -24,7 +24,14 @@ app = Dash(__name__, use_pages=True, pages_folder='pages',
 server = app.server
 
 app.layout = dbc.Container([
-    breadcrumbs,
+    dbc.Breadcrumb(
+    items=[
+        {"label": page_names[idx], "href": page['path']}
+        for idx, page in enumerate(dash.page_registry.values())
+    ],
+    class_name="navbar",
+    
+    ),
     # html.Div([dcc.Link(page['name']+" | ", href=page['path']) for page in dash.page_registry.values()]),
 
     dash.page_container
