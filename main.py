@@ -49,5 +49,5 @@ def update_hnpcarousel_text(indeks):
         return carousel_desc_list[indeks]
     return carousel_desc_list[0]
 # if __name__ == "__main__":
-app.run_server(debug=True, use_reloader=False)
+app.run_server()
 
