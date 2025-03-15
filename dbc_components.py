@@ -190,20 +190,20 @@ demo_desc_list = [
 
 hnp_card = dbc.Card(
     [
+        dbc.CardHeader(html.H1("Master's Thesis: HNP Portal")),
         dbc.CardImg(src="assets/hnp_portal.png", top=True),
-        dbc.CardHeader("HNP Portal"),
         dbc.CardBody(
-            [   html.H3("What is it?"),
-                html.P(["Developed as a prototype for the ",
+            [   html.H4("What is it?"),
+                html.P(["An interactive dashboard developed as a prototype for the ",
                        html.A("MEMORISE", href="https://memorise.sdu.dk/", target="_blank"),
                        "  organization, part of the larger ",
                        html.A("Horizon Europe", href="https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en", target="_blank"),
                        " funding programme. It was the practical part of my master's thesis. ",
                        "'HNP' stands for 'Heritage of Nazi Persecution'."]),
                 html.P(["This prototype is meant to serve as a portal for a dataset containing HNP materials. It uses the ", 
-                        html.A("Visual History Archive", href='https://vha.usc.edu/home'), " dataset, meaning I am not licensed to publicize it."]),
+                        html.A("Visual History Archive", href='https://vha.usc.edu/home'), " dataset, which was made available to me. However, I am not allowed to publicize it."]),
 
-                html.H3('Functionality?'),
+                html.H4('Functionality?'),
                 html.P(["It functions as a search engine and visualization tool for Heritage of Nazi Persecution material. "]),
                 html.P('The left-hand side contains numerous filters that users can combine. The centre contains various visualizations that change depending on the filters, and the right-hand side allows users to select individual people for a closer look into their stories.')
             ]
@@ -212,11 +212,11 @@ hnp_card = dbc.Card(
 )
 
 demo_card = dbc.Card(
-    [
+    [   
+        dbc.CardHeader(html.H1("Democracy Visualized")),
         dbc.CardImg(src="assets/democracy_intheworld.png", top=True),
-        dbc.CardHeader("Democracy in the World"),
         dbc.CardBody(
-            [   html.H3("What is it?"),
+            [   html.H4("What is it?"),
                 html.P(["This was an exam probject for a data visualization class. It was supposed to be presented as a poster to the ",
                        html.A("EuroVis", href="https://event.sdu.dk/eurovis", target="_blank"),
                        " conference, but things got in the way. It was a group project, though I was in charge of the implementation due to experience with data visualization tools.",]),
@@ -224,7 +224,7 @@ demo_card = dbc.Card(
                         html.A("V-Dem", href='https://v-dem.net/data/'), " dataset, which is publically available. ", 
                         "V-Dem gathers expert-sourced data from all over the world to measure democratic developments using a series of 'indices' that attempt to give a score to various aspects of a democratic society."]),
 
-                html.H3('Functionality?'),
+                html.H4('Functionality?'),
                 html.P(["The dashboard allows users to select and compare individual countries, regions, or the world at various parts.",
                         " The map combines a classic choropleth color interval with glyphs indicating development over time. ", 
                         "Users can select individual years in the interval 2000-2024."]),
@@ -234,17 +234,3 @@ demo_card = dbc.Card(
 )
 
 
-
-me_card = dbc.Card(
-    [
-        dbc.CardImg(src="assets/portrait-placeholder-Wide.png", top=True, className="img-fluid rounded-start"),
-        dbc.CardBody(
-            [
-                html.H4("Casper Kamp", className="card-title"),
-                html.P("Masters in Data Science"),
-                html.P("Bachelors in American Studies"),
-            ]
-        ),
-    ],
-    style={"width": "18rem"},
-)

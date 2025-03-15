@@ -20,7 +20,10 @@ color_mode_switch =  dbc.Stack([
         dbc.Label(className="fa fa-sun", html_for="switch"),
     ])
     
-    ], direction='horizontal', style={"position": "absolute", 'right': "5vw", 'top': "5vh"})
+    ], direction='horizontal', style={"position": "absolute", 'right': "5vw", 'top': "5vh", 'zIndex': 999})
+
+breadcrumb_pages = [{"label": page_names[idx], "href": page['path']} for idx, page in enumerate(dash.page_registry.values())]
+
 
 # %%
 
@@ -32,12 +35,6 @@ app = Dash(__name__, use_pages=True, pages_folder='pages',
            )
 server = app.server
 app.layout = dbc.Container([
-
-    dbc.Breadcrumb(
-        items=[{"label": page_names[idx], "href": page['path']} for idx, page in enumerate(dash.page_registry.values())],
-        class_name="navbar",
-        id="breadcrumb"
-        ),
     color_mode_switch,
 
     dash.page_container
@@ -73,6 +70,8 @@ def update_democarousel_text(indeks):
     return demo_desc_list[0]
 
 
+
+
 # if __name__ == "__main__":
-app.run_server(port=8050, host='0.0.0.0')
+app.run_server(debug=True, use_reloader=False)
 
