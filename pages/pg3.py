@@ -12,6 +12,10 @@ from dbc_components import *
 
 # Page layout for pg3
 layout = html.Div([
+    dbc.Breadcrumb(
+        items=[{"label": page_names[idx], "href": page['path'], "active": idx == 2} for idx, page in enumerate(dash.page_registry.values())],
+        class_name="navbar",
+        ),
     dbc.Tabs([
         dbc.Tab(
             dbc.Row([

@@ -11,11 +11,15 @@ from dbc_components import *
 
 # Page layout for pg2
 layout = html.Div([
+    dbc.Breadcrumb(
+        items=[{"label": page_names[idx], "href": page['path'], "active": idx == 1} for idx, page in enumerate(dash.page_registry.values())],
+        class_name="navbar",
+        ),
     dbc.Row([
-        dbc.Col(hnp_card, width=6),
-        dbc.Col(demo_card, width=6)
+        dbc.Col(hnp_card, width=12, sm=12, md=5,),
+        dbc.Col(demo_card, width=12, sm=12, md=5,)
         
-        ], class_name = "row_block_class"),
+        ], class_name = "row_block_class", justify="evenly"),
 ])
 
 # Register the page with a specific path
