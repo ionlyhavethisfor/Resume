@@ -12,7 +12,7 @@ from dash import Dash, html, Input, Output, dcc, State, ctx, ALL, no_update, das
 import dash
 
 color_mode_switch =  dbc.Stack([
-    html.I(className="bi bi-brightness-high"),
+    #html.I(className="bi bi-brightness-high"),
     html.Span(
     [
         dbc.Label(className="fa fa-moon", html_for="switch"),
