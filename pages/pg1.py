@@ -38,7 +38,7 @@ layout = dbc.Container([
             html.H2("What is this website?"),
             html.Hr(),
             html.Ul([
-                html.Li(["This is my resumé website. Currently I am hosting it using ", html.A("Railway", href="https://railway.com/", target='blank')]),
+                html.Li(["This is my résumé website. Currently I am hosting it using ", html.A("Railway", href="https://railway.com/", target='blank')]),
                 html.Li("It contains some information about me, as well as projects I have worked on that I feel are worth sharing"),
                 html.Li(["I built this page using ", 
                         html.A("Dash", href="https://dash.plotly.com/r", target='blank'), " in combination with ",
