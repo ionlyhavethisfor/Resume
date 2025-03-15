@@ -11,7 +11,7 @@ import dash
 from dash import html, dcc
 from dbc_components import *
 
-test = [
+bread = [
         {'label': page_names[0], 'href': '/', 'active': True},
         {'label': page_names[1], 'href': '/pg2'},
         {'label': page_names[2], 'href': '/pg3'},
@@ -20,7 +20,7 @@ test = [
 # Page layout for pg1
 layout = dbc.Container([
     dbc.Breadcrumb(
-        items=test,
+        items=bread,
         class_name="navbar",
         ),
     dbc.Row([
