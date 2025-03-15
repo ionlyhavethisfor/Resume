@@ -12,13 +12,23 @@ from dbc_components import *
 
 # Page layout for pg4
 layout = html.Div([
-    dbc.Row([
-        hnp_carousel, 
-        html.P("", id="hnp_text")
-    ], class_name="row_block_class", id="hnp"),
+    dbc.Tabs([
+        dbc.Tab(
+            dbc.Row([
+                demo_carousel, 
+                html.P("", id="demo_text")
+            ], class_name="row_block_class", id="hnp"),
+            label="Gallery", tab_id='gallery'
+            ),
+        dbc.Tab(html.H2('Working demo coming eventually..'), label="Demo")
+        
+        ], active_tab='gallery')
+
 ])
 
 # Register the page with a specific path
 dash.register_page(__name__)
+
+
 
 
