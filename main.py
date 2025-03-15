@@ -22,9 +22,6 @@ color_mode_switch =  dbc.Stack([
     
     ], direction='horizontal', style={"position": "absolute", 'right': "5vw", 'top': "5vh"})
 
-breadcrumb_pages = [{"label": page_names[idx], "href": page['path']} for idx, page in enumerate(dash.page_registry.values())]
-
-
 # %%
 
 app = Dash(__name__, use_pages=True, pages_folder='pages',
@@ -37,7 +34,7 @@ server = app.server
 app.layout = dbc.Container([
 
     dbc.Breadcrumb(
-        items=breadcrumb_pages,
+        items=[{"label": page_names[idx], "href": page['path']} for idx, page in enumerate(dash.page_registry.values())],
         class_name="navbar",
         id="breadcrumb"
         ),
