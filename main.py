@@ -12,12 +12,12 @@ from dash import Dash, html, Input, Output, dcc, State, ctx, ALL, no_update, das
 import dash
 
 color_mode_switch =  dbc.Stack([
-    #html.I(className="bi bi-brightness-high"),
+    html.I(className="bi bi-brightness-high"),
     html.Span(
     [
-        #dbc.Label(className="fa fa-moon", html_for="switch"),
+        dbc.Label(className="fa fa-moon", html_for="switch"),
         dbc.Switch( id="switch", value=True, className="d-inline-block ms-1", persistence=True),
-        #dbc.Label(className="fa fa-sun", html_for="switch"),
+        dbc.Label(className="fa fa-sun", html_for="switch"),
     ])
     
     ], direction='horizontal', style={"position": "absolute", 'right': "5vw", 'top': "5vh"})
@@ -77,5 +77,5 @@ def update_democarousel_text(indeks):
 
 
 # if __name__ == "__main__":
-app.run_server(debug=False, use_reloader=False)
+app.run_server(port=8050, host='0.0.0.0')
 
