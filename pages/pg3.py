@@ -10,6 +10,13 @@ import dash
 from dash import html
 from dbc_components import *
 
+
+test = [
+        {'label': page_names[0], 'href': '/'},
+        {'label': page_names[1], 'href': '/pg2'},
+        {'label': page_names[2], 'href': '/pg3', 'active': True},
+        {'label': page_names[3], 'href': '/pg4'},]
+
 # Page layout for pg3
 layout = html.Div([
     dbc.Breadcrumb(
