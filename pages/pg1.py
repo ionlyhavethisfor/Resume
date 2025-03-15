@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 """
 Created on Wed Feb 26 15:13:21 2025
@@ -12,12 +13,12 @@ from dbc_components import *
 
 # Page layout for pg1
 layout = dbc.Container([
-    html.H1("Casper Louv Kamp", style={'width': "100vw"}),
-    html.Hr(),
     dbc.Row([
         dbc.Col([
             html.H2("Who am I?"),
+            html.Hr(),
             html.Ul([
+                html.Li("My name is Casper Louv Kamp"),
                 html.Li(["I am a new Data Science graduate from the ", 
                     html.A("University of Southern Denmark", href="https://www.sdu.dk/en", target="blank"),
                     ". My BA was in American Studies, also at SDU"
@@ -30,17 +31,8 @@ layout = dbc.Container([
             ], width=3, class_name='list'),
         
         dbc.Col([
-            html.H2("What are my skills?"),
-            html.Ul([
-                html.Li("Data Visualization, particularly with Plotly"),
-                html.Li("Web Development: Mainly using the Dash framework (and of course HTML, CSS)"),
-                html.Li("Programming Languages: Python, some R"),
-                html.Li("DBM: Practical experience with SQL as part of my thesis"),
-            ])
-            ], width=3, class_name='list'),
-        
-        dbc.Col([
             html.H2("What is this page?"),
+            html.Hr(),
             html.Ul([
                 html.Li("This is my resumé website"),
                 html.Li("It contains some information about me, as well as projects I have worked on that I feel are worth sharing"),
@@ -49,6 +41,18 @@ layout = dbc.Container([
                         html.A("Dash Bootstrap Components", href="https://dash-bootstrap-components.opensource.faculty.ai/", target='blank')]),
             ])
             ], width=3, class_name='list'),
+        
+        dbc.Col([
+            html.H2("What can I do?"),
+            html.Hr(),
+            html.Ul([
+                html.Li("Data Visualization, particularly with Plotly"),
+                html.Li("Web Development: Mainly using the Dash framework (and of course HTML, CSS)"),
+                html.Li("Programming Languages: Python, some R"),
+                html.Li("DBM: Practical experience with SQL as part of my thesis"),
+            ])
+            ], width=3, class_name='list'),
+        
         ], class_name = "row_block_class", justify="around"),
 ], class_name="container", fluid=True)
 
