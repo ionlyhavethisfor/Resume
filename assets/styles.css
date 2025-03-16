@@ -77,3 +77,7 @@ hr {
     bottom: -17vh;  /* Move indicators to the top */
     top: auto;  /* Disable the bottom positioning */
 }
+
+a {
+    text-decoration: none;
+}
