@@ -16,8 +16,8 @@ dash.register_page(__name__)
 
 bread = [
         {'label': page_names[0], 'href': '/'},
-        {'label': page_names[1], 'href': '/thesis'},
-        {'label': page_names[2], 'href': '/democracy', 'active': True},]
+        {'label': page_names[1], 'href': '/pg3'},
+        {'label': page_names[2], 'href': '/pg4', 'active': True},]
 
 # Page layout for pg4
 layout = html.Div([
