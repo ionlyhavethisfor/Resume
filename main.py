@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 Created on Wed Feb 26 15:13:21 2025
 
@@ -22,9 +23,6 @@ color_mode_switch =  dbc.Stack([
     
     ], direction='horizontal', style={"position": "absolute", 'right': "5vw", 'top': "5vh", 'zIndex': 999})
 
-breadcrumb_pages = [{"label": page_names[idx], "href": page['path']} for idx, page in enumerate(dash.page_registry.values())]
-
-
 # %%
 
 app = Dash(__name__, use_pages=True, pages_folder='pages',
@@ -32,7 +30,9 @@ app = Dash(__name__, use_pages=True, pages_folder='pages',
            meta_tags=[
                {"name": "viewport", "content": "width=device-width, initial-scale=1"},
            ],
+           suppress_callback_exceptions=True
            )
+
 server = app.server
 app.layout = dbc.Container([
     color_mode_switch,
@@ -68,7 +68,6 @@ def update_democarousel_text(indeks):
     if indeks:
         return demo_desc_list[indeks]
     return demo_desc_list[0]
-
 
 
 # if __name__ == "__main__":
