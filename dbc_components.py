@@ -10,43 +10,19 @@ from dash import html
 from dash import dcc
 import dash
 
-page_names = ["About", "Projects Overview", "Master's Thesis", "Democracy Visualized"]
+page_names = ["Projects Overview", "Master's Thesis", "Democracy Visualized"]
 breadcrumbs = dbc.Breadcrumb(
     items=[
         {"label": page_names[idx], "href": page['path']}
         for idx, page in enumerate(dash.page_registry.values())
     ],
     class_name="navbar",
-    
     )
-
 
 hnp_crumb = dbc.Breadcrumb(items=[
         {"label": "Video", "href": "#video"},
         {"label": "Gallery", "href": "#hnp"},
     ]),
-
-
-navbar = dbc.Navbar(
-    dbc.Container(
-        [
-            dbc.NavbarBrand("Casper Louv Kamp", href="#"),
-            dbc.Nav(
-                [
-                    dbc.NavLink("About", active=True, href="#"),
-                    dbc.NavLink("Projects Overview", href="#"),
-                    dbc.NavLink("HNP Portal", href="/hnp", external_link=True),
-                    dbc.NavLink("Democracy Visualized", href="#"),
-                ],
-                className="ms-auto",  # Aligns nav items to the right
-            ),
-        ],
-        fluid=True,
-    ),
-    color="primary",
-    dark=True,
-    className="navbar"
-)
 
 
 hnp_carousel = dbc.Carousel(id='hnp_carousel',
