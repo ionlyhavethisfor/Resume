@@ -15,8 +15,8 @@ dash.register_page(__name__)
 
 bread = [
         {'label': page_names[0], 'href': '/'},
-        {'label': page_names[1], 'href': '/thesis', 'active': True},
-        {'label': page_names[2], 'href': '/democracy'}]
+        {'label': page_names[1], 'href': '/pg3', 'active': True},
+        {'label': page_names[2], 'href': '/pg4'}]
 
 layout = html.Div([
     dbc.Breadcrumb(
